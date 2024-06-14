@@ -28,7 +28,7 @@ public class selectSubject_UI : MonoBehaviour
                                            "Faker...", "toy", "help...", "두둥!", "파닥파닥", "harmony"};
 
     // Sound effects
-    public GameObject audio;
+    public GameObject myAudio;
     public GameObject drumAudio;
 
 
@@ -38,7 +38,7 @@ public class selectSubject_UI : MonoBehaviour
         if (subjectList.Length != subjectExplain.Length)
             Debug.Log("ERROR : subjectList length and subject explain length different!");
         gameSubjectUI.SetActive(false);
-        audio.SetActive(false);
+        myAudio.SetActive(false);
         drumAudio.SetActive(false);
     }
 
@@ -96,7 +96,7 @@ public class selectSubject_UI : MonoBehaviour
         yield return new WaitForSeconds(delay);
         drumAudio.SetActive(false);
         yield return new WaitForSeconds(0.1f);
-        audio.SetActive(true);
+        myAudio.SetActive(true);
         gameSubjectUI.SetActive(true);
     }
 }
